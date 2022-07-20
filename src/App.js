@@ -8,6 +8,15 @@ const fighters = ['Roy','Ganondorf', 'Mario', 'Luigi', 'Marth', 'Link',
     <div className="App">
       <h1>Fighters</h1>
       <div className='fighters-grid'>
+        {
+          fighters.map((Element, index) =>{
+            return (
+              <div>
+                <img src={`https://www.smashbros.com/assets_v2/img/fighter/thumb_a/${Element.toLowerCase()}.png`} />
+              </div>
+            )
+          })
+        }
 
       </div>
      
