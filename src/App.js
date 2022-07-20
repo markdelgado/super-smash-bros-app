@@ -12,7 +12,8 @@ const fighters = ['Roy','Ganondorf', 'Mario', 'Luigi', 'Marth', 'Link',
           fighters.map((Element, index) =>{
             return (
               <div>
-                <img src={`https://www.smashbros.com/assets_v2/img/fighter/thumb_a/${Element.toLowerCase()}.png`} />
+                <img src={`https://www.smashbros.com/assets_v2/img/fighter/thumb_a/${Element.toLowerCase()}.png`}  className='fighter-img'/>
+              <h5 className='fighter-name'>{Element}</h5>
               </div>
             )
           })
