@@ -42,3 +42,20 @@ width: 100%;
 height: auto;
 }
 
+#fighter-screen {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: lightgreen;
+  z-index: 1;
+}
+.char-model{
+
+
+}
+
+.char-name{
+  
+}

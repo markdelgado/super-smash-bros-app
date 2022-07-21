@@ -1,8 +1,9 @@
 import './App.css';
+import { useState } from 'react';
 import Fighter from './components/Fighter';
+import FighterScreen from './components/FighterScreen';
 
 function App() {
-
   const fighter = [
     {name: 'Roy', color: 'blue'},
     { name: 'Lucina', color: 'brown' },
@@ -17,21 +18,25 @@ function App() {
     { name: 'Zelda', color: 'midnightblue' },
     { name: 'Ken', color: 'firebrick' },
   ]
+
+  const [selectedFighter, setSelectedFighter] = useState()
+ 
   return (
     <div className="App">
       <h1>Fighters</h1>
       <div className='fighters-grid'>
         {
-          fighter.map((Element, index) =>{
+          fighter.map((element, index) =>{
             return (
-              <Fighter fighter= {Element}/>
+              <Fighter fighter= {element} setSelectedFighter= {setSelectedFighter}/>
             )
           })
         }
-
+  
       </div>
-     
-    </div>
+      
+      { selectedFighter ? <FighterScreen/> : null}
+     </div>
   );
 }
 
