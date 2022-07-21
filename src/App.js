@@ -26,17 +26,20 @@ function App() {
       <h1>Fighters</h1>
       <div className='fighters-grid'>
         {
-          fighter.map((element, index) =>{
+          fighter.map((element, index) => {
             return (
-              <Fighter fighter= {element} setSelectedFighter= {setSelectedFighter}/>
+              <Fighter fighter={element} setSelectedFighter={setSelectedFighter} />
             )
           })
         }
-  
       </div>
-      
-      { selectedFighter ? <FighterScreen/> : null}
-     </div>
+      {
+        // Conditional render (based on ternary)
+        selectedFighter ?
+          <FighterScreen selectedFighter={selectedFighter} />
+          : null
+      }
+    </div>
   );
 }
 
